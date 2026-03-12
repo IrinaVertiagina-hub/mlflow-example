@@ -75,6 +75,10 @@ if __name__ == "__main__":
     # Parameters
     mlflow.log_param("alpha", alpha)
     mlflow.log_param("l1_ratio", l1_ratio)
+    # ---------------
+    mlflow.log_param("train_samples", len(train_x))
+    mlflow.log_metric("intercept", lr.intercept_)
+    # ---------------
     mlflow.log_param("n_train_samples", len(train_x))
     mlflow.log_param("n_test_samples", len(test_x))
     mlflow.log_param("n_features", train_x.shape[1])
